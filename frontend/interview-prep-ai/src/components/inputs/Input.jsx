@@ -40,7 +40,6 @@ const Input = ({ value, onChange, label, placeholder, type }) => {
                     )}
                 </>
             )}
-
         </div>
     </div>
   )

@@ -11,6 +11,27 @@ const Login = ({setCurrentPage}) => {
   //Handle Login Form Submission
   const handleLogin = async (e) => {
     e.preventDefault();
+
+    if(!validateEmail(email)) {
+      setError("Invalid Email");
+      return;
+    }
+
+    if(!password) {
+      setError("Please enter the password");
+    }
+
+    setError("");
+
+    //Login API call
+    try{
+    } catch (error) {
+      if(error.response && error.response.date.message) {
+        setError(error.response.data.message);
+      } else {
+        setError("Something went wrong. Please try again");
+      }
+    }
   };
 
   return (
