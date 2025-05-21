@@ -3,7 +3,9 @@ import hero_img from '../assets/hero_image.png';
 import { APP_FEATURES } from "../utils/data";
 import { useNavigate } from "react-router-dom";
 import { LuSparkles } from "react-icons/lu"
+import Login from './Auth/Login';
 import SignUp from './Auth/SignUp';
+import Modal from '../components/Modal';
 
 const LandingPage = () => {
   const navigate = useNavigate();
@@ -95,7 +97,7 @@ const LandingPage = () => {
                     <div
                       key={feature.id}
                       className="bg-[#FFFEF8] p-6 rounded-xl shadow-xs hover:shadow-lg shadow-amber-100 transition border border-amber-100 "
-                    > console.log("it is working.")
+                    > 
                       <h3 className="text-base font-semibold mb-3">
                         {feature.title}
                       </h3>
